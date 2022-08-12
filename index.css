@@ -1,0 +1,84 @@
+*{
+    overflow-x: hidden;
+    margin: 0;
+    box-sizing:border-box;
+   
+    
+
+}
+button{
+    border-style:none;
+}
+body{
+    height: 100vh;
+    background-color: #fff;
+   
+
+    
+}
+
+h1{
+    text-align:center;
+    font-size:40px;
+    font-weight: 300;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: inset;
+    border-bottom:2px solid black;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 5px;
+}
+#changeColorButton{
+    display:block;
+    text-align:center;
+    margin: 10px;
+    padding:5px;
+}
+
+#buttonsPlace{
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    width: 100%;
+    height:fit-content;
+
+
+}
+.optionButton{
+    width:150px;
+    height: 60px;
+    border: solid 3px black;
+    border-radius:13px;
+    background-color: aliceblue;
+}
+#pickColorButton{
+    height: 60px;
+    width: 60px;
+    border-style: none;
+    padding: 0;
+    border-radius: 100%;
+    margin:8px;
+   
+}
+
+#mainContainer{
+    display: grid;
+}
+#howMany{
+    display:block;
+    text-align:center;
+    margin: 8px;
+
+}
+#getUserInput{
+    width: 80px;
+    height:auto;
+    border-style:none;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+.mainFooter{
+    background:url(/images/drawings.jpg);
+    background-size:cover;
+    background-position: center;
+}
