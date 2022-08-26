@@ -1,54 +1,63 @@
+ 
 //If you're seing this and find something that is weird or could be done better with another way.
 //You are propably right as this is one of my first projects.
 //PROJETO INCOMPLETO.
 const selectColorButton = document.querySelector("#pickColorButton").value;
-const rainbow = document.querySelector("#rainbowButton").addEventListener("click", rainbowOption);
-const eraser = document.querySelector("#eraserButton");
 const clear = document.querySelector("#clearButton").addEventListener('click', clean);
-const rows = document.querySelector("#setGrid").value;
+let rows = document.querySelector("#setGrid").value;
+let whatSize = document.querySelector("#whatSize").innerHTML = rows;
 const mainContent = document.getElementById("mainContainer");
 const mainContent2 =  document.getElementById("mainContainer");
-let createDiv
-
+let createDivContainer = undefined;
+let i = undefined
+let randomColor = undefined;
 //make the grid.
 
 
 let makeGrid = function(size) {
-    for(let i = 0; i < (size * size); i++){
-      let createDiv2 = document.createElement("div");
-        mainContent.appendChild(createDiv2)
+    for(i = 0; i < (size * size); i++){
+      let createDiv = document.createElement("div");
+        mainContent.appendChild(createDiv)
+        mainContent.style.width = "960px";
         mainContent.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-        mainContent.style.gridTemplateRows = `repeat(${size}, 1fr)`;      
-        createDiv2.classList.add('box');
-        createDiv = createDiv2;
-        createDiv2.addEventListener("mouseover", () => {
-            createDiv2.style.backgroundColor = selectColorButton;
-           
+        mainContent.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+        createDiv.classList.add('box');
+        createDivContainer = createDiv;
+        createDiv.addEventListener("mousemove", () => {  
+          createDiv.style.backgroundColor = selectColorButton;
+            
+            
         })
-    }
-
 
 };
-    console.log(createDiv)
-    makeGrid(rows); 
+}
+    makeGrid(rows);
     function rainbowOption()    {
-        alert("jorge!!!");
+        let selector = function() {
+            let r,g,b;
+            r = Math.floor(Math.random() * 256);
+            g = Math.floor(Math.random() * 256);
+            b = Math.floor(Math.random() * 256);
+            selectColorButton = `${r} ${g} ${b}`;
+            console.log(selectColorButton);
+        }
+        console.log(selectColorButton);
     }
-    
-    
 
 
 
-   
+
+
+
     function clean() {
-        let a;
-        a = mainContent.style.backgroundColor = "white";
+        mainContent.innerHTML = "";
+        makeGrid(rows);
     }
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
 
 
