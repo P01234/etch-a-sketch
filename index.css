@@ -60,9 +60,37 @@ h1{
     margin:8px;
    
 }
-
+#mainSection{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
 #mainContainer{
-    display: grid;
+    display:grid;
+    width:500px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height:600px;
+    
+}
+
+
+.box    {
+    display:grid;
+    border: solid gray 1px;
+    
+}
+.divItem{
+    background-color:red
+}
+.childItem  {
+    background-color: #fff;
+    transition: 0.1s;
+}
+.box :hover{
+    background-color: #000;
 }
 #howMany{
     display:block;
