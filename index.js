@@ -9,7 +9,7 @@ let whatSize = document.querySelector("#whatSize").innerHTML = rows;
 const mainContent = document.getElementById("mainContainer");
 const mainContent2 =  document.getElementById("mainContainer");
 let createDivContainer = undefined;
-let i = undefined
+let i = undefined;
 let randomColor = undefined;
 //make the grid.
 
@@ -32,18 +32,7 @@ let makeGrid = function(size) {
 };
 }
     makeGrid(rows);
-    function rainbowOption()    {
-        let selector = function() {
-            let r,g,b;
-            r = Math.floor(Math.random() * 256);
-            g = Math.floor(Math.random() * 256);
-            b = Math.floor(Math.random() * 256);
-            selectColorButton = `${r} ${g} ${b}`;
-            console.log(selectColorButton);
-        }
-        console.log(selectColorButton);
-    }
-
+    
 
 
 
