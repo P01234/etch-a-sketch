@@ -14,40 +14,36 @@
     <title></title>
 </head>
 <body>
-    <h1>Etch A-Sketch</h1>
+    <h1>Etch-A-Sketch</h1>
     
         
         <div id = "changeColorButton">
-            <input type="color" class = "firstOptionButton" id="pickColorButton">
-            <div class = "goBellow">
-                <p>Pick Your Color</p>
+            <button class ='optionButton' id="colorButton">Color</button>
+        </div>
+        <div id = "colorChangeArea">
+            <input value type="color" class = "firstOptionButton" id="pickColorButton">
+        </div>
+        <div id = "buttonsPlace">
+            <div>
+                <button class = "optionButton" id="rainbowButton">Rainbow</button>
+            </div>
+            <div>
+                <button class = "optionButton" id="eraserButton">Eraser</button>
+            </div>
+            <div>
+                <button class = "optionButton" id="clearButton">Clear</button>
             </div>
         </div>
-            <div id = "buttonsPlace">
-        <div>
-            <button class = "optionButton" id="rainbowButton">Rainbow</button>
-        </div>
-        <div>
-            <button class = "optionButton" id="eraserButton">Eraser</button>
-        </div>
-        <div>
-            <button class = "optionButton" id="clearButton">Clear</button>
-        </div>
-            </div>
-            <div id = "howMany">
-                <p class ="interactWithUser">Changes grid size</p>
-                <input type="range" id="setGrid" value="16" min="2" max="64">
-                <div class="gridMeter"><p id = "whatSize"></p></div>
-            </div>
+        
             
-                <section id = "mainSection">
-                    <div id = "mainContainer">
-                    
-                    </div>
-                </section>
-                <footer id = "mainFooter">
-                    
-                </footer>
+        <section id = "mainSection">
+            <div id = "mainContainer">
+            
+            </div>
+        </section>
+        <footer id = "mainFooter">
+            
+        </footer>
 </body>
 <script src="/index.js">
     
