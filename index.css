@@ -36,7 +36,12 @@ h1{
     padding:5px;
 }
 #colorChangeArea{
-    display:block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstOptionbutton{
     text-align: center;
     margin: 10px;
 }
@@ -57,7 +62,7 @@ h1{
     border-radius:13px;
     background-color: aliceblue;
 }
-#pickColorButton{
+.pickColorButton{
     height: 60px;
     width: 60px;
     border-style: none;
