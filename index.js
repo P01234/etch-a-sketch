@@ -15,14 +15,17 @@ function colorGetter(){
   color.oninput = (e) => setColor(e.target.value) //changes event value every time it receives a new input.
 }
 colorGetter(); //start colorGetter funciton
-
+setColor('#000');
 function setColor(colorGot){
-  colorHolder = colorGot; //set colorGot to colorHolder
+  if(colorGot == ""){
+    colorHolder = "#000";
+  }else{
+    colorHolder = colorGot; //set colorGot to colorHolder
+  }
 }
-setColor(); //start setColor function;
 
 function gridTroubleShooting(){
-  if(gridDefiner === null){
+  if(gridDefiner === null || gridDefiner === ""){
     gridDefiner = "16";
     gridSize = parseInt(gridDefiner);
     limitGridSize(); //start function
@@ -35,6 +38,7 @@ function gridTroubleShooting(){
 
 gridTroubleShooting() //start gridTroubleShotting
 
+//limitGridSize was made in order to avoid the excess of divs which causes the system to slow down a lot.
 function limitGridSize(){
   if(gridSize > 32){
     gridSize = 32;
